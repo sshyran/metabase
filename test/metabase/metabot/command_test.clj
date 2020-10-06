@@ -40,7 +40,7 @@
 ;; ok, now let's look at the actual response in its entirety
 (tt/expect-with-temp [Card [{:keys [name id]}]
                       Card [_ {:archived true}]]
-  {:response (format "Here's your 1 most recent cards:\n%d.  <https://metabase.mysite.com/question/%d|\"%s\">"
+  {:response (format "Here are your 1 most recent cards:\n%d.  <https://metabase.mysite.com/question/%d|\"%s\">"
                      id id name)
    :messages []}
   (command "list"))
